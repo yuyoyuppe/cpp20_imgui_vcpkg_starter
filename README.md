@@ -13,7 +13,7 @@ Create imgui-based apps using C++20 and vcpkg dependencies with ease.
 
 #include <ui/GlfwImguiWindow.hpp>
 
-struct MainWindow : public ui::GlfwImguiWindow {
+struct MainWindow : ui::GlfwImguiWindow {
     using GlfwImguiWindow::GlfwImguiWindow;
 
     bool show_demo_window = true;
