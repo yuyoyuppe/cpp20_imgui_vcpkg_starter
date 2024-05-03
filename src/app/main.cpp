@@ -1,8 +1,8 @@
-#include "imgui.h"
+﻿#include "imgui.h"
 
 #include <ui/GlfwImguiWindow.hpp>
 
-struct MainWindow : public ui::GlfwImguiWindow {
+struct MainWindow : ui::GlfwImguiWindow {
     using GlfwImguiWindow::GlfwImguiWindow;
 
     bool show_demo_window = true;
@@ -16,6 +16,11 @@ struct MainWindow : public ui::GlfwImguiWindow {
     void onUpdate() override {
         if(show_demo_window)
             ImGui::ShowDemoWindow(&show_demo_window);
+
+        ImGui::Begin("UTF8Test");
+        ImGui::DebugTextEncoding(u8"Кириллический алфавит");
+
+        ImGui::End();
     }
 };
 

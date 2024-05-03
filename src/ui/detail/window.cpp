@@ -122,7 +122,7 @@ GLFWwindow * create(int width, int height, const char * title, const bool vsync,
     // - Our Emscripten build process allows embedding fonts to be accessible at runtime from the "fonts/" folder. See Makefile.emscripten for details.
     //io.Fonts->AddFontDefault();
     //io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\segoeui.ttf", 18.0f);
-    io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\calibri.ttf", 16.0f * dpi_scale);
+    io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\calibri.ttf", 15.0f * dpi_scale, nullptr, io.Fonts->GetGlyphRangesCyrillic());
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Roboto-Medium.ttf", 16.0f);
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Cousine-Regular.ttf", 15.0f);
     //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, nullptr, io.Fonts->GetGlyphRangesJapanese());
